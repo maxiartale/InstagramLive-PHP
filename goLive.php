@@ -18,7 +18,7 @@ $debug = false;
 $truncatedDebug = false;
 /////////////////////////////////////////////////////
 
-if (IG_USERNAME == "USERNAME" || IG_PASS == "PASSWORD") {
+if (IG_USERNAME == "maxiartale" || IG_PASS == "Maxi161624") {
     logM("Default Username and Passwords have not been changed! Exiting...");
     exit();
 }
@@ -26,7 +26,8 @@ if (IG_USERNAME == "USERNAME" || IG_PASS == "PASSWORD") {
 //Login to Instagram
 logM("Logging into Instagram...");
 $ig = new Instagram($debug, $truncatedDebug);
-try {
+try {composer require mgp25/instagram-php react/child-process
+
     $ig->login(IG_USERNAME, IG_PASS);
 } catch (\Exception $e) {
     echo 'Error While Logging in to Instagram: '.$e->getMessage()."\n";
@@ -131,3 +132,6 @@ function newCommand(Live $live, $broadcastId, $streamUrl, $streamKey) {
 function logM($message) {
     print $message."\n";
 }
+
+
+
